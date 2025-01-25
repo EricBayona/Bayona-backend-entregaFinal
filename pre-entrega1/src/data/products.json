@@ -1,7 +1,21 @@
 [
 	{
-		"id": "e4e9d80c-cc37-4282-bff6-65ee5b0c737c",
-		"title": "Bici",
+		"id": "e3d1a14e-8430-487e-bd60-7268be086237",
+		"title": "Bici2",
+		"description": "Descripción del nuevo producto",
+		"code": "NP001",
+		"price": 10,
+		"status": "available",
+		"stock": 20,
+		"category": "categoria1",
+		"thumbnails": [
+			"url1",
+			"url2"
+		]
+	},
+	{
+		"id": "90684732-cf02-417a-9302-8f89170683a7",
+		"title": "Bici2",
 		"description": "Descripción del nuevo producto",
 		"code": "NP001",
 		"price": 10,

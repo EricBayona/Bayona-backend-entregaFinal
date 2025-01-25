@@ -80,10 +80,7 @@ ProductsRouter.put('/:pid',async(req,res)=>{
         let products = JSON.parse(productsString);
 
         let pid= req.params.pid;
-        const update = req.body;
-
-        console.log(update);
-        
+        const update = req.body;        
 
         let productToUpdate = products.find (p=> p.id === pid)
 
