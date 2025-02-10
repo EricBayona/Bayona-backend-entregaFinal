@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "9a67c96c-4d9d-4c8b-bd52-f9894c4bb334",
+		"name": "solicitudes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42000492"
+	},
+	"item": [
+		{
+			"name": "crear un producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"title\": \"Bici5\",\r\n\t\t\"description\": \"Descripción del nuevo producto\",\r\n\t\t\"code\": \"NP001\",\r\n\t\t\"price\": 10,\r\n\t\t\"status\": \"available\",\r\n\t\t\"stock\": 5,\r\n\t\t\"category\": \"categoria1\",\r\n\t\t\"thumbnails\": [\r\n\t\t\t\"url1\",\r\n\t\t\t\"url2\"\r\n\t\t]\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ver todos los productos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar un producto por id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/e8d49a86-994f-4f94-a293-0ca661f321e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"e8d49a86-994f-4f94-a293-0ca661f321e1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizacion de producto",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\r\n\t\t\"description\": \"probando actualizacion sin el objeto completo\"\r\n\t\t\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/85d9fb16-0f47-486b-aa8e-ac6b84130da6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"85d9fb16-0f47-486b-aa8e-ac6b84130da6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar un producto",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/4608fd7f-035b-4bc9-b9be-b9b3ad812475",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"4608fd7f-035b-4bc9-b9be-b9b3ad812475"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un Carrito",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtiene un carrito por su id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carts/c8a25a3e-06dd-42b2-8d8a-acee17c598e2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"c8a25a3e-06dd-42b2-8d8a-acee17c598e2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregar producto al carrito",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carts/3c4f10c9-d78c-4329-bef2-f410b12c637b/product/85d9fb16-0f47-486b-aa8e-ac6b84130da6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"3c4f10c9-d78c-4329-bef2-f410b12c637b",
+						"product",
+						"85d9fb16-0f47-486b-aa8e-ac6b84130da6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -76,5 +76,6 @@ CartsRouter.post('/:cid/product/:pid', async (req, res) => {
         await fs.promises.writeFile(pathToCarts, cartsStrigified);
         res.send({ message: 'producto Agregado', data: carts })
     } catch (error) {
+        res.status(500).send({ message: error.message });
     }
 })

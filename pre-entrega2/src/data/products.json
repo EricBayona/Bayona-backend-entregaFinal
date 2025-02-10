@@ -1,0 +1,58 @@
+[
+	{
+		"id": "90684732-cf02-417a-9302-8f89170683a7",
+		"title": "Bici2",
+		"description": "Descripción del nuevo producto",
+		"code": "NP001",
+		"price": 10,
+		"status": "available",
+		"stock": 20,
+		"category": "categoria1",
+		"thumbnails": [
+			"url1",
+			"url2"
+		]
+	},
+	{
+		"id": "e8d49a86-994f-4f94-a293-0ca661f321e1",
+		"title": "Bici3",
+		"description": "Descripción del nuevo producto",
+		"code": "NP001",
+		"price": 10,
+		"status": "available",
+		"stock": 1,
+		"category": "categoria1",
+		"thumbnails": [
+			"url1",
+			"url2"
+		]
+	},
+	{
+		"id": "85d9fb16-0f47-486b-aa8e-ac6b84130da6",
+		"title": "Bici1",
+		"description": "probando actualizacion sin el objeto completo",
+		"code": "NP001",
+		"price": 10,
+		"status": "available",
+		"stock": 5,
+		"category": "categoria1",
+		"thumbnails": [
+			"url1",
+			"url2"
+		]
+	},
+	{
+		"id": "4608fd7f-035b-4bc9-b9be-b9b3ad812475",
+		"title": "Bici4",
+		"description": "Descripción del nuevo producto",
+		"code": "NP001",
+		"price": 10,
+		"status": "available",
+		"stock": 5,
+		"category": "categoria1",
+		"thumbnails": [
+			"url1",
+			"url2"
+		]
+	}
+]

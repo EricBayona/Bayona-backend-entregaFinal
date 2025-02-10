@@ -57,3 +57,14 @@ GET http://localhost:8080/api/carts:id: Obtiene un carrito por su ID.
 POST http://localhost:8080/:cid/product/:pid: Agrega un producto al carrito seleccionado.
 
 (cid: id del carrito; pid: id del producto seleccionado)
+
+
+## Postman Collections
+
+Para realizar pruebas correspondientes con las colecciones de Postman, sigue estos pasos:
+
+1. **Importar Colección**: Abre Postman y haz clic en `Import`.
+2. **Seleccionar Archivo**: Selecciona el archivo `solicitudes.postman_collection.json` que está en la raíz de este repositorio.
+3. **Realizar Pruebas**: La colección importada contendrá todas las solicitudes necesarias para realizar las pruebas.
+
+Puedes encontrar la colección de Postman en el siguiente archivo: [solicitudes.postman_collection.json](./solicitudes.postman_collection.json)
