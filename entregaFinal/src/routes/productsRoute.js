@@ -58,7 +58,7 @@ ProductsRouter.get('/:pid', async (req, res) => {
         if (product) {
             res.send({ product });
         } else {
-            res.status(404).send({ message: 'Producto no encontrado' });
+            res.status(404).send({ message: `Producto con ${req.params.pid}no encontrado` });
         }
     } catch (error) {
         res.status(500).send({ message: 'Error al obtener el producto', error: error.message });
