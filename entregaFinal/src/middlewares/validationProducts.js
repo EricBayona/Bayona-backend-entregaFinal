@@ -4,13 +4,13 @@ export const validateInputProducts =(req, res, next)=>{
         description,
         code,
         price,
-        status,
+        available,
         stock,
         category,
         thumbnails,
       } = req.body
 
-      if(!title || !description || !code || !price || !status || !stock || !category || !thumbnails){
+      if(!title || !description || !code || !price || !available|| !stock || !category || !thumbnails){
         return res.status(400).send({ message: "Todos los campos son obligatorios"})
       }
       if(price <= 0 || typeof price != 'number' ){

@@ -54,5 +54,19 @@
 			"url1",
 			"url2"
 		]
+	},
+	{
+		"id": "865d1705-a152-4c7f-b56e-70cefbb3b456",
+		"title": "Bici5",
+		"description": "Descripción del nuevo producto",
+		"code": "NP001",
+		"price": 10,
+		"status": "available",
+		"stock": 5,
+		"category": "categoria1",
+		"thumbnails": [
+			"url1",
+			"url2"
+		]
 	}
 ]

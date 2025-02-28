@@ -6,9 +6,12 @@ import { dirname, join } from 'path'
 const __filename = fileURLToPath(import.meta.url)
 export const __dirname = join(dirname(__filename) + '../../../')
 
-// console.log({ __dirname })
 
 export const config = {
   dirname: __dirname,
-  PORT: 8080,
+  PORT: 3006,
+  db: {
+    connectionString: 'mongodb+srv://root:sG2z7yIO21PLCZaN@cluster0.gotq1.mongodb.net/entregaFinal?retryWrites=true&w=majority&appName=Cluster0'
+  }
 }
+console.log(config.dirname);
