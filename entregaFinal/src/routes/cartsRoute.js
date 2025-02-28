@@ -83,7 +83,7 @@ CartsRouter.post('/:cid/products/:pid', async (req, res) => {
 })
 
 
-// Eliminar del carrito producto seleccionado
+// Eliminar del carrito un producto seleccionado
 
 
 CartsRouter.delete('/:cid/products/:pid', async (req, res) => {
