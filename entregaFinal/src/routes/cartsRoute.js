@@ -154,6 +154,8 @@ CartsRouter.put('/:cid/products/:pid', async (req, res) => {
 
 // Eliminar un carrito por Id
 
+// No uso en este caso el middlewares- verifyExistence para que me queden las dos formas de realizar la misma tarea
+
 CartsRouter.delete('/:cid', async (req, res) => {
     try {
         const cartId = await CartModel.findByIdAndDelete(req.params.cid);

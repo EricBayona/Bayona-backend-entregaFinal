@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { v4 as uuidv4 } from 'uuid';
 import { ProductModel } from '../models/products.model.js';
 import { validateInputProducts } from '../middlewares/validationProducts.js';
+import { multerUploaderMiddleware } from '../middlewares/multerConfig.js';
 
 export const ProductsRouter = Router();
 
@@ -66,10 +67,15 @@ ProductsRouter.get('/:pid', async (req, res) => {
 });
 
 // Crear nuevo producto
-ProductsRouter.post('/', validateInputProducts, async (req, res) => {
+ProductsRouter.post('/', multerUploaderMiddleware.single('thumbnail'), validateInputProducts, async (req, res) => {
     try {
+        let thumbnailUrl = null;
+        if (req.file) {
+            thumbnailUrl = `/uploads/${req.file.filename}`;
+        }
         const product = new ProductModel({
             ...req.body,
+            thumbnails: thumbnailUrl ? [thumbnailUrl] : [],
             id: uuidv4(), // Generar un ID único
         });
         await product.save();
